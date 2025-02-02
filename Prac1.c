@@ -57,19 +57,19 @@ int main()
 //6 0155
 //    1111 1110 1010 1010  (valor original)
 //    0000 0001 0101 0101  (valor que se desea)
-    a |= (1<<15) | (3<<12) | (1<<7) | (3<<4);
+    a ^= (0xFFFF);
     printf("\n6 = %X", a);
   
 //7 0001
 //    0000 0000 0000 0000  (valor original)
 //    0000 0000 0000 0001  (valor que se desea)
-    a |= (1<<15) | (3<<12) | (1<<7) | (3<<4);
+    a ^= (0x0154);
     printf("\n7 = %X", a);
   
 //8 0100
 //    0000 0000 0000 0000  (valor original)
 //    0000 0001 0000 0000  (valor que se desea)
-    a |= (1<<15) | (3<<12) | (1<<7) | (3<<4);
+    a ^= 0x0101;
     printf("\n8 = %X", a);
 
     return 0;
